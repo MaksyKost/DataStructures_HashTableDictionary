@@ -7,7 +7,7 @@ struct AVLNode {
     int height;
     AVLNode* left;
     AVLNode* right;
-    AVLNode(int a, int b);
+    AVLNode(int a = 0, int b = 0, int h = 1) : key(a), value(b), height(h), left(nullptr), right(nullptr) {};
 };
 
 class AVLTree {
@@ -19,6 +19,7 @@ private:
     bool find(AVLNode *node, int key, int& value) const;
     int height(AVLNode* node);
     int balanceFactor(AVLNode* node);
+    int max(int a, int b);
     AVLNode* rotateLeft(AVLNode* y);
     AVLNode* rotateRight(AVLNode* x);
     AVLNode* minValueNode(AVLNode* node);
