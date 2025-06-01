@@ -5,12 +5,16 @@ AVLTree::AVLTree() {
     root = nullptr;
 }
 
-void AVLTree::clear() {
-
+void AVLTree::clear(AVLNode* node) {
+    if (node == nullptr) return;
+    clear(node->left);
+    clear(node->right);
+    delete node;
 }
 
-AVLTree::~AVLTree() {
-    clear();
+void AVLTree::clear() {
+    clear(root);
+    root = nullptr;
 }
 
 int AVLTree::height(AVLNode *node) {
@@ -156,4 +160,12 @@ AVLNode* AVLTree::remove(AVLNode *node, int key) {
     node->height = 1 + max(height(node->left), height(node->right));
     node = balance(node);
     return node;
+}
+
+void AVLTree::remove(int key) {
+    root = remove(root, key);
+}
+
+AVLTree::~AVLTree() {
+    clear();
 }

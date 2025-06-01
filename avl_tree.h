@@ -13,7 +13,7 @@ struct AVLNode {
 class AVLTree {
 private:
     AVLNode* root;
-    
+    void clear(AVLNode* node);
     AVLNode* insert(AVLNode *node, int key, int value);
     AVLNode* remove(AVLNode *node, int key);
     bool find(AVLNode *node, int key, int& value) const;

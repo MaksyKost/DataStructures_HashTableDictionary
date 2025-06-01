@@ -15,7 +15,7 @@ private:
     int hash(int key) const;
 
 public:
-    DictionaryAVL(int size = 11);
+    DictionaryAVL(int size = 101);
     ~DictionaryAVL();
 
     void insert(int key, int value) override;
