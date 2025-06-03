@@ -1,0 +1,150 @@
+
+
+==== Testowanie słowników dla rozmiaru: 2000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.000500592 s
+Remove: 0.000430713 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.000498604 s
+Remove: 0.000253031 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.000182264 s
+Remove: 0.000534474 s
+
+
+==== Testowanie słowników dla rozmiaru: 4000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.00204874 s
+Remove: 0.00195611 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00111374 s
+Remove: 0.000576383 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.000354231 s
+Remove: 0.00199883 s
+
+
+==== Testowanie słowników dla rozmiaru: 6000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.00456207 s
+Remove: 0.00432389 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00176355 s
+Remove: 0.000942138 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.000549519 s
+Remove: 0.00424786 s
+
+
+==== Testowanie słowników dla rozmiaru: 8000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.00798251 s
+Remove: 0.00725115 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00246719 s
+Remove: 0.00131623 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.00070277 s
+Remove: 0.00721129 s
+
+
+==== Testowanie słowników dla rozmiaru: 10000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.0121064 s
+Remove: 0.0106171 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00319623 s
+Remove: 0.00174227 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.000882189 s
+Remove: 0.0108107 s
+
+
+==== Testowanie słowników dla rozmiaru: 12000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.0168937 s
+Remove: 0.0143677 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00394417 s
+Remove: 0.00221392 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.00110811 s
+Remove: 0.0149828 s
+
+
+==== Testowanie słowników dla rozmiaru: 14000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.0222234 s
+Remove: 0.0184204 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00470334 s
+Remove: 0.00269873 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.00127937 s
+Remove: 0.0196792 s
+
+
+==== Testowanie słowników dla rozmiaru: 16000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.0280526 s
+Remove: 0.0227118 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00545503 s
+Remove: 0.00318325 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.00144499 s
+Remove: 0.0248606 s
+
+
+==== Testowanie słowników dla rozmiaru: 18000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.034284 s
+Remove: 0.0273409 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00623473 s
+Remove: 0.00371494 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.00161414 s
+Remove: 0.0305279 s
+
+
+==== Testowanie słowników dla rozmiaru: 20000 elementów ====
+
+*** Wyniki dla DictionarySC ***
+Insert: 0.0408199 s
+Remove: 0.0321116 s
+
+*** Wyniki dla DictionaryAVL ***
+Insert: 0.00697788 s
+Remove: 0.00422072 s
+
+*** Wyniki dla DictionaryHeap ***
+Insert: 0.00178564 s
+Remove: 0.0364851 s
