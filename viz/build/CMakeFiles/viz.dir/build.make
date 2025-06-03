@@ -86,14 +86,48 @@ CMakeFiles/viz.dir/viz.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/viz.dir/viz.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\viz\viz.cpp" -o CMakeFiles\viz.dir\viz.cpp.s
 
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj: CMakeFiles/viz.dir/flags.make
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj: CMakeFiles/viz.dir/includes_CXX.rsp
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj: C:/Visual\ Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj: CMakeFiles/viz.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\viz\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj -MF CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp.obj.d -o CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp.obj -c "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp"
+
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp" > CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp.i
+
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp" -o CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.cpp.s
+
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj: CMakeFiles/viz.dir/flags.make
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj: CMakeFiles/viz.dir/includes_CXX.rsp
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj: C:/Visual\ Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj: CMakeFiles/viz.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\viz\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj -MF CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp.obj.d -o CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp.obj -c "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp"
+
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp" > CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp.i
+
+CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp" -o CMakeFiles\viz.dir\C_\Visual_Studio\SD_proj3\DataStructures_HashTableDictionary\avl_tree.cpp.s
+
 # Object files for target viz
 viz_OBJECTS = \
-"CMakeFiles/viz.dir/viz.cpp.obj"
+"CMakeFiles/viz.dir/viz.cpp.obj" \
+"CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj" \
+"CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj"
 
 # External object files for target viz
 viz_EXTERNAL_OBJECTS =
 
 viz.exe: CMakeFiles/viz.dir/viz.cpp.obj
+viz.exe: CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/dictionary_avl.cpp.obj
+viz.exe: CMakeFiles/viz.dir/C_/Visual_Studio/SD_proj3/DataStructures_HashTableDictionary/avl_tree.cpp.obj
 viz.exe: CMakeFiles/viz.dir/build.make
 viz.exe: C:/Libraries/SFML-3.0.0/lib/libsfml-graphics-d.a
 viz.exe: C:/Libraries/SFML-3.0.0/lib/libsfml-window-d.a
@@ -101,7 +135,7 @@ viz.exe: C:/Libraries/SFML-3.0.0/lib/libsfml-system-d.a
 viz.exe: CMakeFiles/viz.dir/linkLibs.rsp
 viz.exe: CMakeFiles/viz.dir/objects1.rsp
 viz.exe: CMakeFiles/viz.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\viz\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable viz.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\viz\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable viz.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\viz.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

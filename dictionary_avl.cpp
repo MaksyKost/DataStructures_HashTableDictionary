@@ -1,6 +1,8 @@
 #include <iostream>
 #include "avl_tree.h"
 #include "dictionary_avl.h"
+#include <cstdlib>
+#include <ctime>
 
 DictionaryAVL::DictionaryAVL(int size) : size(size) {
     table = new Bucket[size]; 
@@ -35,4 +37,13 @@ void DictionaryAVL::clear() {
 
 DictionaryAVL::~DictionaryAVL() {
     clear();
+}
+
+void DictionaryAVL::fillRandom(int count, int keyMin, int keyMax, int valueMin, int valueMax) {
+    std::srand(static_cast<unsigned>(std::time(nullptr)));
+    for (int i = 0; i < count; ++i) {
+        int key = keyMin + std::rand() % (keyMax - keyMin + 1);
+        int value = valueMin + std::rand() % (valueMax - valueMin + 1);
+        insert(key, value);
+    }
 }

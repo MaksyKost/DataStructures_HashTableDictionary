@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 #include "avl_tree.h"
 
 AVLTree::AVLTree() {
@@ -168,4 +169,14 @@ void AVLTree::remove(int key) {
 
 AVLTree::~AVLTree() {
     clear();
+}
+
+void AVLTree::inOrder(std::vector<int>& keys) const {
+    std::function<void(AVLNode*)> traverse = [&](AVLNode* node) {
+        if (!node) return;
+        traverse(node->left);
+        keys.push_back(node->key);
+        traverse(node->right);
+    };
+    traverse(root);
 }

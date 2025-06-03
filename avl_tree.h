@@ -1,5 +1,6 @@
 #ifndef AVL_TREE_H
 #define AVL_TREE_H
+#include <vector>
 
 struct AVLNode {
     int key;
@@ -32,6 +33,8 @@ public:
     void remove(int key);
     bool find(int key, int &value) const;
     void clear();
+    void inOrder(std::vector<int>& keys) const;
+    AVLNode* getRoot() const { return root; }
 };
 
 #endif
