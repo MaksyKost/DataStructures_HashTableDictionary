@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "format": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "unordered_map": "cpp",
+        "set": "cpp"
     }
 }
