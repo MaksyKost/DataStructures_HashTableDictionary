@@ -1,43 +1,36 @@
 #include <iostream>
-#include "src/dictionary_avl.h"
+#include "src/heap.h"
 
 int main() {
-    DictionaryAVL dict(5);
+    Heap heap;
 
-    
-    dict.insert(10, 100);
-    dict.insert(15, 150);
-    dict.insert(20, 200);
-    dict.insert(25, 250);
-    dict.insert(30, 300);
+    // Вставка элементов
+    heap.insert(5, 100);
+    heap.insert(2, 200);
+    heap.insert(8, 300);
+    heap.insert(1, 400);
 
+    std::cout << "Heap after insertions:\n";
+    for (const auto& node : heap.getData()) {
+        std::cout << "key: " << node.key << ", value: " << node.value << std::endl;
+    }
+
+    // find
     int value;
-    if (dict.find(10, value))
-        std::cout << "Key 10 found, value = " << value << std::endl;
+    if (heap.find(2, value))
+        std::cout << "Found key 2, value = " << value << std::endl;
     else
-        std::cout << "Key 10 not found" << std::endl;
+        std::cout << "Key 2 not found\n";
 
-    if (dict.find(15, value))
-        std::cout << "Key 15 found, value = " << value << std::endl;
-    else
-        std::cout << "Key 15 not found" << std::endl;
+    // remove
+    heap.remove(2);
+    std::cout << "Heap after removing key 2:\n";
+    for (const auto& node : heap.getData()) {
+        std::cout << "key: " << node.key << ", value: " << node.value << std::endl;
+    }
 
-    if (dict.find(99, value))
-        std::cout << "Key 99 found, value = " << value << std::endl;
-    else
-        std::cout << "Key 99 not found" << std::endl;
-
-    dict.remove(15);
-    if (dict.find(15, value))
-        std::cout << "Key 15 found after removal, value = " << value << std::endl;
-    else
-        std::cout << "Key 15 not found after removal" << std::endl;
-
-    dict.clear();
-    if (dict.find(10, value))
-        std::cout << "Key 10 found after clear, value = " << value << std::endl;
-    else
-        std::cout << "Key 10 not found after clear" << std::endl;
+    heap.clear();
+    std::cout << "Heap after clear, size = " << heap.getData().size() << std::endl;
 
     return 0;
 }
