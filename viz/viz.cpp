@@ -9,7 +9,8 @@ enum class Screen {
     MainMenu,
     AvlMenu,
     Display,
-    TreeView
+    TreeView,
+    InputRemoveKey
 };
 
 int main() 
@@ -19,6 +20,9 @@ int main()
     //sf::RenderWindow window(sf::VideoMode({1280u, 720u}), "SFML Window");
     int selectedBucket = 0;
     const int bucketCount = dict.getSize();
+    std::string inputKey;
+    std::string notificationText;
+    float notificationTimer;
 
     sf::Font font;
     if (!font.openFromFile("GOTHICB.ttf")) return 1;
@@ -41,14 +45,14 @@ int main()
             line[0].position = sf::Vector2f(x, y);
             line[1].position = sf::Vector2f(x - xOffset, y + 80);
             window.draw(line);
-            drawTree(node->left, x - xOffset, y + 80, xOffset / 1.7f);
+            drawTree(node->left, x - xOffset, y + 80, xOffset / 2.0f);
         }
         if (node->right) {
             sf::VertexArray line(sf::PrimitiveType::Lines, 2);
             line[0].position = sf::Vector2f(x, y);
             line[1].position = sf::Vector2f(x + xOffset, y + 80);
             window.draw(line);
-            drawTree(node->right, x + xOffset, y + 80, xOffset / 1.7f);
+            drawTree(node->right, x + xOffset, y + 80, xOffset / 2.0f);
         }
 
         // Нарисовать сам узел (круг)
@@ -67,8 +71,16 @@ int main()
         window.draw(keyText);
     };
 
+    // Перед циклом
+    sf::Clock clock;
+
+    // В начале while (window.isOpen())
     while (window.isOpen())
     {
+        float dt = clock.restart().asSeconds();
+
+        
+
         std::optional<sf::Event> optEvent;
         while (optEvent = window.pollEvent())
         {
@@ -99,11 +111,15 @@ int main()
                     if (key->code == sf::Keyboard::Key::Enter) {
                         if (avlMenuSelected == 0) {
                             // insert
-                            dict.insert(12, 5);
+                            notificationText.clear();
+                            int key = 1 + rand() % 1000;
+                            dict.fillRandom(1, key, key, 1, 100); 
+                            notificationText = "Added element: " + std::to_string(key);
+                            notificationTimer = 2.0f; // 2 secs
                         }
                         if (avlMenuSelected == 1) {
-                            // remove
-                            dict.remove(12);
+                            inputKey.clear();
+                            currentScreen = Screen::InputRemoveKey;
                         }
                         if (avlMenuSelected == 2) {
                             // fill random
@@ -139,6 +155,24 @@ int main()
                         currentScreen = Screen::Display;
                 }
             }
+            else if (currentScreen == Screen::InputRemoveKey) {
+                if (auto* text = event.getIf<sf::Event::TextEntered>()) {
+                    if (std::isdigit(text->unicode)) {
+                        inputKey += static_cast<char>(text->unicode);
+                    }
+                    if (text->unicode == '\b' && !inputKey.empty()) { // Backspace
+                        inputKey.pop_back();
+                    }
+                    if (text->unicode == '\r' && !inputKey.empty()) { // Enter
+                        int keyToRemove = std::stoi(inputKey);
+                        dict.remove(keyToRemove);
+                        currentScreen = Screen::AvlMenu;
+                    }
+                    if (text->unicode == 27) { // Escape
+                        currentScreen = Screen::AvlMenu;
+                    }
+                }
+            }
         }
 
         window.clear(sf::Color(7, 107, 148));
@@ -170,6 +204,12 @@ int main()
             const float startX = (window.getSize().x - totalWidth) / 2.f;
             const float startY = 200.f;
 
+            // Надпись "Hash-Table"
+            sf::Text title(font, "Hash-Table", 40);
+            title.setPosition(sf::Vector2f(startX, startY - 70.f));
+            title.setFillColor(sf::Color::White);
+            window.draw(title);
+
             for (int i = 0; i < bucketCount; ++i) {
                 sf::RectangleShape cell(sf::Vector2f(cellWidth, cellHeight));                
                 cell.setPosition(sf::Vector2f(startX + i * (cellWidth + gap), startY));
@@ -197,6 +237,57 @@ int main()
             backText.setFillColor(sf::Color::Yellow);
             window.draw(backText);
         }
+
+        else if (currentScreen == Screen::InputRemoveKey) {
+            // hint
+            sf::Text prompt(font, "Enter the key to delete:", 32);
+            prompt.setPosition(sf::Vector2f(100.f, 200.f));
+            prompt.setFillColor(sf::Color::White);
+            window.draw(prompt);
+
+            // entered text
+            sf::Text input(font, inputKey.empty() ? "_" : inputKey, 32);
+            input.setPosition(sf::Vector2f(100.f, 250.f));
+            input.setFillColor(sf::Color::Yellow);
+            window.draw(input);
+
+            // instruction
+            sf::Text info(font, "Enter - delete, Esc - cancel action, Backspace - exit", 20);
+            info.setPosition(sf::Vector2f(100.f, 320.f));
+            info.setFillColor(sf::Color(180, 220, 255));
+            window.draw(info);
+        }
+
+        // show notific if timer > 0
+        if (notificationTimer > 0.f && !notificationText.empty()) {
+            // window size
+            float winW = window.getSize().x;
+            float winH = window.getSize().y;
+
+            // notific parameteres
+            float notifWidth = 400.f;
+            float notifHeight = 50.f;
+            float notifX = (winW - notifWidth) / 2.f;
+            float notifY = winH - notifHeight - 40.f;
+
+            // rectangle
+            sf::RectangleShape notifBg(sf::Vector2f(notifWidth, notifHeight));
+            notifBg.setPosition(sf::Vector2f(notifX, notifY));
+            notifBg.setFillColor(sf::Color(30, 30, 30, 200));
+            notifBg.setOutlineColor(sf::Color(200, 200, 200));
+            notifBg.setOutlineThickness(2.f);
+            window.draw(notifBg);
+
+            // text
+            sf::Text notifText(font, notificationText, 24);
+            notifText.setFillColor(sf::Color::White);
+            notifText.setPosition(sf::Vector2f(notifX + 20.f, notifY + 10.f));
+            window.draw(notifText);
+
+            // decrease timer
+            notificationTimer -= dt;
+            if (notificationTimer < 0.f) notificationTimer = 0.f;
+}
 
         window.display();
     }

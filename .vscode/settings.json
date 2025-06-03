@@ -2,7 +2,13 @@
     "files.associations": {
         "format": "cpp",
         "optional": "cpp",
+<<<<<<< HEAD
         "unordered_map": "cpp",
         "set": "cpp"
+=======
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+>>>>>>> 88b96641b5106bf99a781b3d548657866f34dd9d
     }
 }
