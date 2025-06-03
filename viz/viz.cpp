@@ -3,7 +3,7 @@
 #include <functional>
 #include <vector>
 #include <string>
-#include "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\dictionary_avl.h"
+#include "C:\Visual Studio\SD_proj3\DataStructures_HashTableDictionary\src\dictionary_avl.h"
 
 enum class Screen {
     MainMenu,

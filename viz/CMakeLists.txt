@@ -9,8 +9,8 @@ find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
 add_executable(viz 
     viz.cpp 
-    "../dictionary_avl.cpp"
-    "../avl_tree.cpp"
+    "C:/Visual Studio/SD_proj3/DataStructures_HashTableDictionary/src/dictionary_avl.cpp"
+    "C:/Visual Studio/SD_proj3/DataStructures_HashTableDictionary/src/avl_tree.cpp"
 )
 
 target_link_libraries(viz
