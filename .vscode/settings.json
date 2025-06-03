@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "format": "cpp",
-        "optional": "cpp"
+        "optional": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
     }
 }
