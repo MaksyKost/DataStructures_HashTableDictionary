@@ -1,5 +1,5 @@
 #include <iostream>
-#include "dictionary_avl.h"
+#include "src/dictionary_avl.h"
 
 int main() {
     DictionaryAVL dict(5);
